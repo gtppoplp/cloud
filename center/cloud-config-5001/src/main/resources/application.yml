@@ -1,0 +1,29 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git: # 远程库的git地址
+          uri: http://192.168.10.3:9091/gtppoplp/cloud-config.git
+          username: gtppoplp
+          password: lirong801
+          search-paths: # 设置配置文件查找的匹配目录
+            - center
+            - gateway
+            - services/provider
+            - services/consumer
+
+  rabbitmq:
+    host: 192.168.10.3
+    port: 5672
+    username: guest
+    password: lirong801
+# 暴露触发消息总线的地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
