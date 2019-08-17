@@ -7,8 +7,8 @@ spring:
     config:
       server:
         git: # 远程库的git地址
-          uri: http://192.168.10.3:9091/gtppoplp/cloud-config.git
-          username: gtppoplp
+          uri: https://github.com/gtppoplp/cloud-config.git
+          username: gtppoplp@outlook.com
           password: lirong801
           search-paths: # 设置配置文件查找的匹配目录
             - center
@@ -17,7 +17,7 @@ spring:
             - services/consumer
 
   rabbitmq:
-    host: 192.168.10.3
+    host: 127.0.0.1
     port: 5672
     username: guest
     password: lirong801
