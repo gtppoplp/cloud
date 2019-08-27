@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: Levin
+      author: lirong
       changes:
         - createTable:
-            tableName: person
+            tableName: demo
             columns:
               - column:
                   name: id
@@ -26,22 +26,37 @@ databaseChangeLog:
 
   - changeSet:
       id: 2
-      author: Levin
+      author: lirong
       changes:
         - insert:
-            tableName: person
+            tableName: demo
             columns:
               - column:
                   name: first_name
-                  value: Marcel
+                  value: demo1
               - column:
                   name: last_name
-                  value: Overdijk
+                  value: demo1
 
   - changeSet:
       id: 3
-      author: Levin
+      author: lirong
       changes:
         - sqlFile:
             encoding: utf8
-            path: classpath:db/changelog/sqlfile/test1.sql
+            path: classpath:db/changelog/sqlfile/3_demo.sql
+
+  - changeSet:
+      id: 4
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/4_oauth_client_details_table.sql
+  - changeSet:
+      id: 5
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/5_oauth_client_details_data.sql

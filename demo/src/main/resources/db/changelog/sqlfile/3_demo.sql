@@ -1,0 +1,1 @@
+INSERT INTO `demo` (`id`, `first_name`, `last_name`) VALUES ('2', 'demo2', 'demo2');

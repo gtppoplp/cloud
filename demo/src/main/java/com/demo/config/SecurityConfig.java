@@ -1,6 +1,7 @@
-package com.gxlirong.cloud.config;
+package com.demo.config;
 
-import com.gxlirong.cloud.component.MyBasicAuthenticationEntryPoint;
+
+import com.demo.security.MyBasicAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,12 +13,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * @author developlee
+ * @since 2018/11/17 22:43
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Value("${security.config.username}")
+    @Value("${web.security.username}")
     String username;
-    @Value("${security.config.password}")
+    @Value("${web.security.password}")
     String password;
 
     @Autowired

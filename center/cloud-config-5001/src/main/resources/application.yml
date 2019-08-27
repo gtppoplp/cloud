@@ -15,7 +15,7 @@ spring:
             - gateway
             - services/provider
             - services/consumer
-
+          default-label: test #默认分支
   rabbitmq:
     host: 127.0.0.1
     port: 5672
