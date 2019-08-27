@@ -41,6 +41,17 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
+        <!-- 数据迁移 -->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+        <!--安全-->
+        <!-- ... other dependency elements ... -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <!--命令 mvn clean package docker:build -DpushImage  -->
@@ -59,7 +70,8 @@
                     <forceTags>true</forceTags>
                     <dockerHost>http://www.lirongblog.com:2375</dockerHost>
                     <serverId>docker-aliyun</serverId>
-                    <imageName>registry.cn-shenzhen.aliyuncs.com/lirongblog/${project.artifactId}:${project.version}</imageName>
+                    <imageName>registry.cn-shenzhen.aliyuncs.com/lirongblog/${project.artifactId}:${project.version}
+                    </imageName>
                     <baseImage>java</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <resources>
