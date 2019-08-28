@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-/**
- * class ProductClientService
- *
- * @author lirong
- */
 @FeignClient(value = "CLOUD-PRODUCT-SERVICE", fallback = ProductClientServiceFallBack.class)
 public interface ProductClientService {
 

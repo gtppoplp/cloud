@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * class ProductConsumerController
- *
- * @author lirong
- */
 @RestController
 public class ProductConsumerController {
     @Autowired
