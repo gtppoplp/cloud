@@ -17,7 +17,7 @@ spring:
             - services/consumer
           default-label: test #默认分支
   rabbitmq:
-    host: 127.0.0.1
+    host: www.lirongblog.com
     port: 5672
     username: guest
     password: lirong801
