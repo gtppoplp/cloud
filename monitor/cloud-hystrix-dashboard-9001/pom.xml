@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.gxlirong.cloud</groupId>
             <artifactId>cloud-api</artifactId>
-            <version>${project.version}</version>
+            <version>${cloud.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
