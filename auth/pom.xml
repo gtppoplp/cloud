@@ -12,37 +12,28 @@
     <artifactId>auth</artifactId>
     <packaging>pom</packaging>
 
-    <properties>
-        <cloud.security.version>1.0-SNAPSHOT</cloud.security.version>
-    </properties>
-
     <modules>
         <!--授权服务-->
         <module>authorization-server</module>
-        <!--鉴权服务-->
-        <module>authentication-server</module>
         <!--认证客户端-->
         <module>authentication-client</module>
     </modules>
 
-
     <dependencies>
+        <dependency>
+            <groupId>com.gxlirong.cloud</groupId>
+            <artifactId>cloud-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--mybatis依赖包-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.9</version>
-        </dependency>
-        <!--postgresql数据库-->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4-1203-jdbc4</version>
+            <version>${druid.spring.version}</version>
         </dependency>
         <!--Redis缓存-->
         <dependency>
