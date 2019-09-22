@@ -48,12 +48,5 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-
-        <!--oauth2认证-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-security</artifactId>-->
-<!--        </dependency>-->
-
     </dependencies>
 </project>
