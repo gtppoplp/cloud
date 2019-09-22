@@ -14,10 +14,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--授权服务-->
-        <module>authorization-server</module>
-        <!--认证客户端-->
-        <module>authentication-client</module>
+        <!--认证服务器-->
+        <module>authorization-service</module>
+        <!--资源服务器-->
+        <module>resource-service</module>
     </modules>
 
     <dependencies>
@@ -36,6 +36,5 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-
     </dependencies>
 </project>
