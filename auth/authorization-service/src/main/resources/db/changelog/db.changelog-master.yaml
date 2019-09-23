@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/1_oauth_client_details.sql
+  - changeSet:
+      id: 2
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/2.install_oauth_client_details.sql

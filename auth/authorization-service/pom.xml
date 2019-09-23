@@ -12,18 +12,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>authorization-service</artifactId>
+    <description>授权服务</description>
 
     <dependencies>
         <dependency>
             <groupId>com.gxlirong.cloud</groupId>
             <artifactId>cloud-web</artifactId>
             <version>${cloud.web.version}</version>
-        </dependency>
-
-        <!-- Spring Cloud Config 客户端依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <!-- 导入Eureka客户端的依赖，将 微服务提供者 注册进 Eureka -->
@@ -47,6 +42,26 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <!--oauth2认证-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-security</artifactId>
+        </dependency>
+
+        <!--使用 lombok 简化 Java 代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- 数据迁移 -->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
         </dependency>
     </dependencies>
 </project>

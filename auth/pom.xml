@@ -16,8 +16,7 @@
     <modules>
         <!--认证服务器-->
         <module>authorization-service</module>
-        <!--资源服务器-->
-        <module>resource-service</module>
+        <module>authentication-server</module>
     </modules>
 
     <dependencies>
