@@ -10,13 +10,11 @@
     <artifactId>common</artifactId>
     <description>公共源码</description>
 
-
     <parent>
         <groupId>com.gxlirong.cloud</groupId>
         <artifactId>cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
 
     <modules>
         <module>cloud-api</module>

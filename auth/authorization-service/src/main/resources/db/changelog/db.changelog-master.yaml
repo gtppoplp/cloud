@@ -5,7 +5,7 @@ databaseChangeLog:
       changes:
         - sqlFile:
             encoding: utf8
-            path: classpath:db/changelog/sqlfile/1_oauth_client_details.sql
+            path: classpath:db/changelog/sqlfile/1.oauth_default_initialization_table.sql
   - changeSet:
       id: 2
       author: lirong
@@ -13,3 +13,17 @@ databaseChangeLog:
         - sqlFile:
             encoding: utf8
             path: classpath:db/changelog/sqlfile/2.install_oauth_client_details.sql
+  - changeSet:
+      id: 3
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/3.initialization_rbac.sql
+  - changeSet:
+      id: 4
+      author: lirong
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/sqlfile/4.initialization_user.sql

@@ -15,6 +15,16 @@ spring:
       initial-size: 5 # 初始化连接数
       max-total: 5 # 最大连接数
       max-wait-millis: 150 # 等待连接获取的最大超时时间
+  redis:
+    host: 120.78.70.152
+    port: 6379
+    password: ABCDlirong#801
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml # mybatis配置文件所在路径
+  type-aliases-package: com.gxlirong.cloud.entities.po # 所有Entity别名类所在包
+  mapper-locations: classpath:mybatis/mapper/**/*.xml # mapper映射文件
+
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
@@ -36,3 +46,9 @@ security:
       #配置应用信息
       client-id: admin
       client-secret: 123456
+
+auth:
+  security:
+    oauth2:
+      tokenStore: redis
+      storeType: jwt

@@ -13,7 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * class SecurityConfig
+ * 请求访问安全配置
  *
  * @author lirong
  */
@@ -23,6 +23,18 @@ public class WebServerSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsService userDetailsService;
 
+    /**
+     * 覆盖此方法来配置 {@link HttpSecurity}. 通常，
+     * 子类不应该通过调用超级因为它可能覆盖其配置调用此方法。
+     * 默认配置是:
+     *
+     * <pre>
+     * http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
+     * </pre>
+     *
+     * @param http the {@link HttpSecurity} to modify HTTP安全性
+     * @throws Exception 异常
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
@@ -47,11 +59,22 @@ public class WebServerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(passwordEncoder());
     }
 
+    /**
+     * 密码加密方式存入容器
+     *
+     * @return BCryptPasswordEncoder
+     */
     @Bean
     protected PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * 认证管理器存入容器
+     *
+     * @return 认证管理器
+     * @throws Exception 异常
+     */
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
