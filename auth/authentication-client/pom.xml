@@ -3,22 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud</artifactId>
+        <artifactId>auth</artifactId>
         <groupId>com.gxlirong.cloud</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>auth</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>authentication-client</artifactId>
+    <description>授权客户端</description>
 
-    <modules>
-        <!--认证服务器-->
-        <module>authorization-server</module>
-        <!--认证服务器-->
-        <module>authentication-server</module>
-        <!--客户端-->
-        <module>authentication-client</module>
-    </modules>
 </project>
